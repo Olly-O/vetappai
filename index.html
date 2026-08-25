@@ -172,6 +172,104 @@
             </div>
 
         </div> <!-- End of pipeline container -->
+        <!-- RISK-FREE 7-DAY TRIAL BANNER -->
+        <div class="trial-container">
+            <div class="trial-badge">🎁 Risk-Free Pilot Program</div>
+            <h2>Experience the Value <span>Completely Free For 7 Days</span></h2>
+            <p class="trial-subtitle">You have absolutely nothing to lose, no workflow disruption to fear, and immense automation value to gain.</p>
+            
+            <div class="trial-grid">
+                <!-- Что клиент теряет? (Ничего) -->
+                <div class="trial-card lose">
+                    <h4>What You Risk Below:</h4>
+                    <ul>
+                        <li>❌ <b>No Credit Card Required:</b> We do not ask for billing info to start the trial.</li>
+                        <li>❌ <b>No Software Friction:</b> Your current veterinary CRM/PMS remains untouched.</li>
+                        <li>❌ <b>No Time Wasted:</b> We handle 100% of the background configuration for you.</li>
+                    </ul>
+                </div>
+                
+                <!-- Что клиент приобретает? (Огромную выгоду) -->
+                <div class="trial-card gain">
+                    <h4>What You Gain After 7 Days:</h4>
+                    <ul>
+                        <li>✅ <b>Captured Bookings:</b> See the exact names and phone numbers of clients captured 24/7.</li>
+                        <li>✅ <b>60% Call Relief:</b> Watch your front-desk staff breathe easier as routine FAQs disappear.</li>
+                        <li>✅ <b>Structured Data:</b> Receive automated SOAP summaries directly to your medical desk.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="trial-footer-text">
+                🔒 If VetAI doesn’t prove its ROI within the first week, we take it down with a single click. No obligations, no hidden fees.
+            </div>
+        </div>
+
+        <style>
+            /* Стили для блока 7-дневного теста */
+            .trial-container {
+                max-width: 1200px;
+                margin: 60px auto;
+                background: white;
+                padding: 40px;
+                border-radius: 16px;
+                border: 1px solid var(--border);
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+                text-align: center;
+            }
+            .trial-badge {
+                display: inline-block;
+                background-color: #FEF3C7;
+                color: #92400E;
+                padding: 6px 14px;
+                border-radius: 99px;
+                font-size: 12px;
+                font-weight: 600;
+                margin-bottom: 16px;
+                text-transform: uppercase;
+            }
+            .trial-container h2 { font-size: 30px; font-weight: 700; margin-bottom: 8px; color: var(--primary); letter-spacing: -0.5px; }
+            .trial-container h2 span { color: var(--accent); }
+            .trial-subtitle { color: #64748B; font-size: 16px; max-width: 700px; margin: 0 auto 32px auto; }
+            
+            .trial-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 24px;
+                margin-bottom: 24px;
+                text-align: left;
+            }
+            .trial-card {
+                padding: 24px;
+                border-radius: 12px;
+                border: 1px solid var(--border);
+            }
+            .trial-card.lose { background: #F8FAFC; }
+            .trial-card.gain { background: #EFF6FF; border-color: #BFDBFE; }
+            
+            .trial-card h4 { font-size: 15px; font-weight: 700; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.5px; }
+            .trial-card.lose h4 { color: #475569; }
+            .trial-card.gain h4 { color: #1E40AF; }
+            
+            .trial-card ul { list-style: none; }
+            .trial-card li { font-size: 14px; margin-bottom: 12px; color: var(--primary); line-height: 1.4; }
+            .trial-card b { color: var(--primary); }
+            
+            .trial-footer-text {
+                font-size: 13px;
+                color: #64748B;
+                font-weight: 500;
+                border-top: 1px solid var(--border);
+                padding-top: 20px;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+            
+            @media (max-width: 768px) {
+                .trial-grid { grid-template-columns: 1fr; gap: 16px; }
+                .trial-container { padding: 24px; margin: 40px 20px; }
+            }
+        </style>
         <!-- 4. PRACTICE ROI CALCULATOR MODULE -->
         <div class="roi-container">
             <h2 style="text-align: center; font-size: 32px; font-weight: 700; margin-bottom: 8px;">Calculate Your <span>Practice Savings</span></h2>
