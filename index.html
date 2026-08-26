@@ -103,23 +103,6 @@
             .pipeline-step { grid-template-columns: 1fr; text-align: center; gap: 12px; }
             .step-icon { margin: 0 auto; } .roi-grid { grid-template-columns: 1fr; }
         }
-        .fixed-chat-container {
-        position: fixed !important;
-        bottom: 20px !important;
-        right: 20px !important;
-        width: 400px; /* Ширина открытого окна чата */
-        height: 600px; /* Высота открытого окна чата */
-        z-index: 999999999 !important;
-    }
-    .fixed-chat-container iframe {
-        width: 100%;
-        height: 100%;
-        border-radius: 12px;
-        box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-    }
-    @media (max-width: 480px) {
-        .fixed-chat-container { width: 100%; height: 100%; bottom: 0; right: 0; }
-    }
     </style>
 </head>
 <body>
@@ -335,19 +318,10 @@
 
     <!-- ============================================================= -->
     <!-- СЮДА ВСТАВЛЯЕТСЯ КОД ВИДЖЕТА ИЗ CHAT-DATA (ПАНЕЛЬ SHARE/EMBED) -->
-    <!--<script
+    <script
         src="https://www.chat-data.com/embed.min.js?chatbotId=6a8b1282c7e53cbe0d11242b"
         defer>
-    </script>-->
-    <div class="fixed-chat-container">
-        <iframe
-            src="https://www.chat-data.com/chatbot-iframe/6a8b1282c7e53cbe0d11242b"
-            width="100%"
-            style="height: 100%; min-height: 600px"
-            allow="clipboard-write; microphone; autoplay; geolocation"
-            frameBorder="0"
-        ></iframe>
-    </div>
+    </script>
     <!-- ============================================================= -->
 
     <!-- JAVASCRIPT LOGIC FOR ROI CALCULATOR -->
