@@ -20,7 +20,6 @@
             color: var(--primary);
             line-height: 1.5;
             overflow-x: hidden;
-            margin-buttom: 50px;
         }
         
         /* HERO SECTION (SERIOUS & POWERFUL) */
@@ -104,18 +103,23 @@
             .pipeline-step { grid-template-columns: 1fr; text-align: center; gap: 12px; }
             .step-icon { margin: 0 auto; } .roi-grid { grid-template-columns: 1fr; }
         }
-        [id*="chat-data" i], 
-        [class*="chat-data" i], 
-        iframe[title*="chat" i],
-        div[style*="fixed"] {
-            position: fixed !important;
-            bottom: 30px !important; /* Принудительно приподнимает кнопку над "полом" сайта */
-            right: 30px !important;
-            z-index: 999999999 !important; /* Максимальный приоритет слоя */
-            display: block !important;
-            opacity: 1 !important;
-            visibility: visible !important;
-        }
+        .fixed-chat-container {
+        position: fixed !important;
+        bottom: 20px !important;
+        right: 20px !important;
+        width: 400px; /* Ширина открытого окна чата */
+        height: 600px; /* Высота открытого окна чата */
+        z-index: 999999999 !important;
+    }
+    .fixed-chat-container iframe {
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+    @media (max-width: 480px) {
+        .fixed-chat-container { width: 100%; height: 100%; bottom: 0; right: 0; }
+    }
     </style>
 </head>
 <body>
@@ -335,13 +339,15 @@
         src="https://www.chat-data.com/embed.min.js?chatbotId=6a8b1282c7e53cbe0d11242b"
         defer>
     </script>-->
-    <iframe
-        src="https://www.chat-data.com/chatbot-iframe/6a8b1282c7e53cbe0d11242b"
-        width="100%"
-        style="height: 100%; min-height: 600px"
-        allow="clipboard-write; microphone; autoplay; geolocation"
-        frameBorder="0"
-    ></iframe>
+    <div class="fixed-chat-container">
+        <iframe
+            src="https://www.chat-data.com/chatbot-iframe/6a8b1282c7e53cbe0d11242b"
+            width="100%"
+            style="height: 100%; min-height: 600px"
+            allow="clipboard-write; microphone; autoplay; geolocation"
+            frameBorder="0"
+        ></iframe>
+    </div>
     <!-- ============================================================= -->
 
     <!-- JAVASCRIPT LOGIC FOR ROI CALCULATOR -->
