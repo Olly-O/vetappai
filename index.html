@@ -104,6 +104,18 @@
             .pipeline-step { grid-template-columns: 1fr; text-align: center; gap: 12px; }
             .step-icon { margin: 0 auto; } .roi-grid { grid-template-columns: 1fr; }
         }
+        [id*="chat-data" i], 
+        [class*="chat-data" i], 
+        iframe[title*="chat" i],
+        div[style*="fixed"] {
+            position: fixed !important;
+            bottom: 30px !important; /* Принудительно приподнимает кнопку над "полом" сайта */
+            right: 30px !important;
+            z-index: 999999999 !important; /* Максимальный приоритет слоя */
+            display: block !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
     </style>
 </head>
 <body>
@@ -361,5 +373,6 @@
             calculateROI();
         });
     </script>
+    <div style="height: 120px; width: 100%; clear: both; background: transparent;"></div>
 </body>
 </html>
