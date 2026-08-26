@@ -95,7 +95,9 @@
         .security-wall p { font-size: 11px; text-transform: uppercase; color: #94A3B8; margin-bottom: 16px; font-weight: 600; }
         .logo-grid { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
         .logo-item { font-size: 12px; font-weight: 600; color: #64748B; background: #F1F5F9; padding: 6px 12px; border-radius: 4px; border: 1px solid var(--border); }
-        #chat-data-bubble, .chat-data-widget, iframe[src*="chat-data"] { z-index: 999999 !important; }
+        .chat {
+            z-index: 99999 !important;
+        }
 
         @media (max-width: 768px) {
             h1 { font-size: 34px; } .subtitle { font-size: 18px; }
@@ -318,10 +320,12 @@
 
     <!-- ============================================================= -->
     <!-- СЮДА ВСТАВЛЯЕТСЯ КОД ВИДЖЕТА ИЗ CHAT-DATA (ПАНЕЛЬ SHARE/EMBED) -->
+    <div class="chat">
     <script
         src="https://www.chat-data.com/embed.min.js?chatbotId=6a8b1282c7e53cbe0d11242b"
         defer>
     </script>
+    </div>
     <!-- ============================================================= -->
 
     <!-- JAVASCRIPT LOGIC FOR ROI CALCULATOR -->
